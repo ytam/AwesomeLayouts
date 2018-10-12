@@ -1,0 +1,51 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/hastalist_swipe_refresh_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@drawable/background"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/activity_item2" />
+
+        <include
+            android:layout_marginTop="8dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/activity_item2" />
+
+        <include
+            android:layout_marginTop="8dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/activity_item2" />
+
+        <include
+            android:layout_marginTop="8dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/activity_item2" />
+
+        <include
+            android:layout_marginTop="8dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/activity_item2" />
+
+
+    </LinearLayout>
+
+
+
+
+
+</ScrollView>
+

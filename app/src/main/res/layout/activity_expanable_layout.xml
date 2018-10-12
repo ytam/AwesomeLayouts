@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@android:color/holo_blue_light"
+    android:id="@+id/user_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lnrGorevTalep"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="10"
+                    android:src="@android:drawable/ic_menu_agenda" />
+
+                <TextView
+                    android:id="@+id/txtExpandleButtonKons"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_arrow_up"
+                    android:onClick="expandableButtonKons"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="Kimlik Bilgileri "
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayoutKons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:ael_duration="400"
+                app:ael_expanded="true"
+                app:ael_interpolator="linearOutSlowIn"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1">
+
+                        <!--<TableRow>-->
+
+                        <!--<ImageView-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="125dp"-->
+                        <!--android:layout_gravity="center"-->
+                        <!--android:layout_span="2"-->
+                        <!--android:padding="10dip"-->
+                        <!--android:src="@drawable/male"></ImageView>-->
+                        <!--</TableRow>-->
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Adı Soyadı" />
+
+                            <TextView
+                                android:id="@+id/txtAdiSoyadi"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip"
+                                android:text="Yıldırım" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="T.C. Kimlik No" />
+
+                            <TextView
+                                android:id="@+id/txtTcNo"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Baba Adı" />
+
+                            <TextView
+                                android:id="@+id/txtBabaAdi"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Anne Adı" />
+
+                            <TextView
+                                android:id="@+id/txtAnneAdi"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Cinsiyet" />
+
+                            <TextView
+                                android:id="@+id/txtCinsiyet"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Doğum Yeri" />
+
+                            <TextView
+                                android:id="@+id/txtDogumYeri"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Doğum Tarihi" />
+
+                            <TextView
+                                android:id="@+id/txtDogumTarihi"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_orange_light"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="10"
+                    android:src="@android:drawable/ic_menu_myplaces" />
+
+                <TextView
+                    android:id="@+id/txtExpandleButton"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:onClick="expandableButton1"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="Kimlik Detay Bilgileri"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayout1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/expandableButton1"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="linearOutSlowIn"
+                app:ael_orientation="vertical">
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginBottom="6dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@android:color/darker_gray" />
+
+                <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:stretchColumns="1">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="40dp"
+                            android:gravity="left"
+                            android:padding="10dip"
+                            android:text="Nufus İli" />
+
+                        <TextView
+                            android:id="@+id/txtNufusIli"
+                            android:layout_height="40dp"
+                            android:gravity="right"
+                            android:padding="10dip"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="2px"
+                        android:background="#BDBDBD">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="2px"
+                            android:layout_span="2"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="40dp"
+                            android:gravity="left"
+                            android:padding="10dip"
+                            android:text="Nufus İlçe" />
+
+                        <TextView
+                            android:id="@+id/txtNufusIlce"
+                            android:layout_height="40dp"
+                            android:gravity="right"
+                            android:padding="10dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="2px"
+                        android:background="#BDBDBD">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="2px"
+                            android:layout_span="2"
+                            android:text="" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_height="40dp"
+                            android:gravity="left"
+                            android:padding="10dip"
+                            android:text="Medeni Hali" />
+
+                        <TextView
+                            android:id="@+id/txtMedeniHali"
+                            android:layout_height="40dp"
+                            android:gravity="right"
+                            android:padding="10dip" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_height="2px"
+                        android:background="#BDBDBD">
+
+                        <TextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="2px"
+                            android:layout_span="2"
+                            android:text="" />
+                    </TableRow>
+
+                </TableLayout>
+
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_green_light"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="10"
+                    android:src="@android:drawable/ic_menu_info_details" />
+
+                <TextView
+                    android:id="@+id/txtExpandleButtonKonsDiger"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_arrow_down"
+                    android:onClick="expandableButtonDiger"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="Adres Bilgileri "
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayoutKonsDiger"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/expandableLayout1"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="linearOutSlowIn"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="İl" />
+
+                            <TextView
+                                android:id="@+id/txtAdresIli"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="İlçe" />
+
+                            <TextView
+                                android:id="@+id/txtAdressIlce"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Beyan Adres" />
+
+                            <TextView
+                                android:id="@+id/txtBeyanAdres"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|end"
+                                android:gravity="end"
+                                android:minHeight="40dp"
+                                android:padding="10dip" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                    </TableLayout>
+
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="fill"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@android:color/holo_red_light"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="10"
+                    android:src="@android:drawable/ic_menu_info_details" />
+
+                <TextView
+                    android:id="@+id/txtExpandleButtonTani"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_keyboard_arrow_right_black_24dp"
+                    android:onClick="expandableButtonTani"
+                    android:paddingLeft="6dp"
+                    android:paddingRight="6dp"
+                    android:text="Telefon Bilgileri"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <com.github.aakira.expandablelayout.ExpandableRelativeLayout
+                android:id="@+id/expandableLayoutKonsTani"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/expandableLayoutKons"
+                app:ael_duration="400"
+                app:ael_expanded="false"
+                app:ael_interpolator="linearOutSlowIn"
+                app:ael_orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="6dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_marginTop="4dp"
+                        android:background="@android:color/darker_gray" />
+
+                    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:stretchColumns="1">
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Cep Telefonu" />
+
+                            <TextView
+                                android:id="@+id/txtCepTel"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="Ev Telefonu" />
+
+                            <TextView
+                                android:id="@+id/txtEvTel"
+                                android:layout_height="40dp"
+                                android:gravity="right"
+                                android:padding="10dip" />
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <TextView
+                                android:layout_height="40dp"
+                                android:gravity="left"
+                                android:padding="10dip"
+                                android:text="İş Telefonu" />
+
+                            <TextView
+                                android:id="@+id/txtIsTel"
+                                android:layout_width="150dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|end"
+                                android:gravity="end"
+                                android:minHeight="40dp"
+                                android:padding="10dip" />
+
+                        </TableRow>
+
+                        <TableRow
+                            android:layout_height="2px"
+                            android:background="#BDBDBD">
+
+                            <TextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="2px"
+                                android:layout_span="2"
+                                android:text="" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+            </com.github.aakira.expandablelayout.ExpandableRelativeLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
