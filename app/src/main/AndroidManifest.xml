@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".ItemLayout" />
         <activity android:name=".Item2" />
-        <activity android:name=".ExpanableLayout"></activity>
+        <activity android:name=".ExpanableLayout"/>
+        <activity android:name=".HomeScreen"/>
     </application>
 
 </manifest>

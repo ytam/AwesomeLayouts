@@ -30,4 +30,10 @@ public class MainActivity extends RootActivity {
         startActivity(new Intent(MainActivity.this,ExpanableLayout.class));
 
     }
+
+    @OnClick(R.id.cardViewHomeLayout) void cardViewHomeLayout(){
+
+        startActivity(new Intent(MainActivity.this,HomeScreen.class));
+
+    }
 }

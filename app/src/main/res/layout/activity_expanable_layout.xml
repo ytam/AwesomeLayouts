@@ -289,7 +289,8 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:background="@android:color/holo_orange_light"
+            android:background="#80CBC4
+"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -435,7 +436,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:background="@android:color/holo_green_light"
+            android:background="#BCAAA4"
             android:orientation="vertical"
             android:padding="5dp">
 
@@ -591,7 +592,7 @@
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
             android:layout_marginTop="8dp"
-            android:background="@android:color/holo_red_light"
+            android:background="#C5CAE9"
             android:orientation="vertical"
             android:padding="5dp">
 
