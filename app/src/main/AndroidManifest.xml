@@ -20,6 +20,8 @@
         <activity android:name=".Item2" />
         <activity android:name=".ExpanableLayout"/>
         <activity android:name=".HomeScreen"/>
+        <activity android:name=".Login"
+            android:theme="@style/NoActionBar"/>
     </application>
 
 </manifest>
