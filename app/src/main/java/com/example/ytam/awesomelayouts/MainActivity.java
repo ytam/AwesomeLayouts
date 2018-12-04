@@ -1,4 +1,4 @@
-package com.example.fonetbilgiteknoloji.awesomelayouts;
+package com.example.ytam.awesomelayouts;
 
 import android.content.Intent;
 import android.os.Bundle;
